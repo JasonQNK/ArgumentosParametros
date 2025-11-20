@@ -46,14 +46,22 @@ function iniciarSistemaNominaEmpleado() {
         repetir == false;
       }else {
 
-        calcularSalarioBrutoEmpleado();
+        calcularSalarioBrutoEmpleado(cantidadHoras, VALOR_HORA);
 
       }
     }
   }
 }
 function calcularSalarioNetoEmpleado() {}
-function calcularSalarioBrutoEmpleado() {}
+function calcularSalarioBrutoEmpleado(cantidadHoras, VALOR_HORA) {
+    let salarioEmpleado = 0 
+    if(cantidadHoras > LIMITE_HORAS){
+        salarioEmpleado = VALOR_HORA * LIMITE_HORAS
+    } else {
+        salarioEmpleado = VALOR_HORA * cantidadHoras
+    }
+    console.log("El salario es: " + salarioEmpleado)
+}
 function calcularValorHorasExtra() {}
 function calcularAuxilioDeTransporte() {}
 function calcularValorDeducciones() {}
